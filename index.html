@@ -9,33 +9,87 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to our Ecommerce Site</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#products">Products</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <div class="logo">
+                <h1>URBAN THREADS</h1>
+                <p>Premium Streetwear Collection</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#products">Shop</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#cart" class="cart-link">Cart (<span id="cart-count">0</span>)</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Elevate Your Style</h2>
+            <p>Discover our premium streetwear collection featuring the latest trends in urban fashion. From classic tees to statement pieces, find your perfect look.</p>
+            <a href="#products" class="cta-button">Shop Now</a>
+        </div>
+    </section>
     <main id="products">
         <section class="product-list">
             <article class="product-card">
-                <img src="tshirt1.jpg" alt="T-Shirt 1">
-                <h2>Classic T-Shirt</h2>
-                <p>$20</p>
-                <button type="button">Add to Cart</button>
+                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Classic White Tee">
+                <h2>Classic White Tee</h2>
+                <p class="price">$24.99</p>
+                <button type="button" class="add-to-cart-btn">Add to Cart</button>
             </article>
             <article class="product-card">
-                <img src="tshirt2.jpg" alt="T-Shirt 2">
-                <h2>V-Neck T-Shirt</h2>
-                <p>$25</p>
-                <button type="button">Add to Cart</button>
+                <img src="https://images.unsplash.com/photo-1583743089695-4b816a340f82?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Black Graphic Tee">
+                <h2>Black Graphic Tee</h2>
+                <p class="price">$29.99</p>
+                <button type="button" class="add-to-cart-btn">Add to Cart</button>
+            </article>
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1503341504253-dff4815485f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Oversized Hoodie">
+                <h2>Oversized Hoodie</h2>
+                <p class="price">$49.99</p>
+                <button type="button" class="add-to-cart-btn">Add to Cart</button>
+            </article>
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Striped Polo">
+                <h2>Striped Polo</h2>
+                <p class="price">$34.99</p>
+                <button type="button" class="add-to-cart-btn">Add to Cart</button>
+            </article>
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Vintage Denim Jacket">
+                <h2>Vintage Denim Jacket</h2>
+                <p class="price">$59.99</p>
+                <button type="button" class="add-to-cart-btn">Add to Cart</button>
+            </article>
+            <article class="product-card">
+                <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" alt="Cropped Sweatshirt">
+                <h2>Cropped Sweatshirt</h2>
+                <p class="price">$39.99</p>
+                <button type="button" class="add-to-cart-btn">Add to Cart</button>
             </article>
         </section>
     </main>
     <footer id="contact">
-        <p>Contact us at info@ecommerce.com</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>URBAN THREADS</h3>
+                <p>Premium streetwear for the modern urban lifestyle.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: hello@urbanthreads.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <p>Instagram | Twitter | Facebook</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Urban Threads. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>

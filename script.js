@@ -73,32 +73,47 @@ function initStore() {
     // Load cart from storage
     loadCartFromStorage();
 
+    // Update cart count display
+    updateCartCountDisplay();
+
     // Add event listeners to all "Add to Cart" buttons
-    const addToCartButtons = document.querySelectorAll('button[type="button"]');
+    const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
 
     addToCartButtons.forEach(button => {
         button.addEventListener('click', function() {
             // Get product info from the parent card
             const productCard = this.closest('.product-card');
             const productName = productCard.querySelector('h2').textContent;
-            const productPriceText = productCard.querySelector('p').textContent;
+            const productPriceText = productCard.querySelector('.price').textContent;
             const productPrice = parseFloat(productPriceText.replace('$', ''));
 
             // Add to cart
             addToCart(productName, productPrice);
 
+            // Update cart count display
+            updateCartCountDisplay();
+
             // Visual feedback
-            this.style.backgroundColor = '#2ecc71';
+            const originalText = this.textContent;
             this.textContent = 'Added!';
+            this.style.background = 'linear-gradient(45deg, #2ecc71, #27ae60)';
 
             setTimeout(() => {
-                this.style.backgroundColor = '#3498db';
-                this.textContent = 'Add to Cart';
+                this.textContent = originalText;
+                this.style.background = 'linear-gradient(45deg, var(--accent-color), #d63a55)';
             }, 1000);
         });
     });
 
     console.log('E-Commerce store initialized');
+}
+
+// Update cart count display
+function updateCartCountDisplay() {
+    const cartCountElement = document.getElementById('cart-count');
+    if (cartCountElement) {
+        cartCountElement.textContent = cartCount;
+    }
 }
 
 // Initialize when DOM is loaded
